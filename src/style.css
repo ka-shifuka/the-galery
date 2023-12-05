@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global */
+* {
+  font-family: "Poppins", Sans-Serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+}

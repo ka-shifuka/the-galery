@@ -20,7 +20,7 @@
         <!-- title and icon -->
       </header>
 
-      <main class="mt-6 columns-1 sm:columns-2 md:columns-3">
+      <main class="mt-6 columns-1 sm:columns-2 md:columns-3 lg:columns-4">
         <div v-for="image in data">
           <images class="mb-6" :url="image.url"></images>
         </div>

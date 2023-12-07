@@ -40,13 +40,12 @@
         :src="props.url"
         alt="pictures"
         loading="lazy"
-        @mouseover="slideActive = false"
       />
       <!-- end  main image -->
 
       <!-- background to create blur effect -->
       <img
-        class="w-full h-fit rounded-xl blur-md absolute top-4 right-0 -z-10"
+        class="w-full h-fit rounded-xl blur-md absolute top-4 right-0 -z-10 brightness-75"
         :src="props.url"
         loading="lazy"
         alt="pictures blur effect"
@@ -74,15 +73,18 @@
     </figure>
 
     <figcaption
-      class="absolute h-full top-0 left-0 transition-all duration-300 overflow-hidden"
+      class="absolute h-full top-0 left-0 transition-all duration-300"
       :class="slideActive ? 'w-full' : 'w-0'"
     >
       <div
-        class="@wrap h-full w-2/3 min-w-[150px] p-3 rounded-xl z-10"
-        :class="props.textwhite ? 'text-zinc-100' : 'text-zinc-900'"
+        class="@wrap relative h-full rounded-xl z-10 z-10 overflow-hidden transition-all duration-300"
+        :class="[
+          props.textwhite ? 'text-zinc-100' : 'text-zinc-900',
+          slideActive ? 'w-2/3' : 'w-0'
+        ]"
         :style="`background-color: ${bgcolor}`"
       >
-        <div class="@wrap flex justify-between">
+        <div class="@wrap flex justify-between m-3">
           <h1 class="text-md font-semibold">{{ props.title }}</h1>
 
           <!-- counter slideActive -->
@@ -93,6 +95,13 @@
         </div>
         <p class="text-sm">{{ props.description }}</p>
       </div>
+
+      <!-- counter slideActive -->
+      <div
+        class="absolute scale-125 top-0 left-0 w-full h-full bg-transparent"
+        @mouseover="slideActive = false"
+      ></div>
+      <!-- counter slideActive -->
     </figcaption>
   </div>
 </template>

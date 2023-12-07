@@ -8,18 +8,20 @@
    * url : url of images
    * title : figure title
    * description : figure description
+   * bgcolor : figcaption background color
    * textwhite : use if the background is dark
    */
   const props = defineProps({
     url: String,
     title: String,
     description: String,
+    bgcolor: { type: String, default: "#D8C8BB" },
     textwhite: Boolean
   });
-  
+
   /*
    * if is scroll slideActive become false
-  */
+   */
   onMounted(() => {
     window.addEventListener("scroll", function () {
       slideActive.value = false;
@@ -33,7 +35,12 @@
   <div class="@wrap w-fit h-fit relative">
     <figure>
       <!-- main image -->
-      <img class="w-full h-fit rounded-xl" :src="props.url" alt="pictures" />
+      <img
+        class="w-full h-fit rounded-xl"
+        :src="props.url"
+        alt="pictures"
+        @mouseover="slideActive = false"
+      />
       <!-- end  main image -->
 
       <!-- background to create blur effect -->
@@ -69,8 +76,9 @@
       :class="slideActive ? 'w-full' : 'w-0'"
     >
       <div
-        class="@wrap h-full w-2/3 min-w-[150px] p-3 rounded-xl bg-transparent backdrop-blur-2xl"
+        class="@wrap h-full w-2/3 min-w-[150px] p-3 rounded-xl z-10"
         :class="props.textwhite ? 'text-zinc-100' : 'text-zinc-900'"
+        :style="`background-color: ${bgcolor}`"
       >
         <div class="@wrap flex justify-between">
           <h1 class="text-md font-semibold">{{ props.title }}</h1>

@@ -20,16 +20,9 @@
         <!-- title and icon -->
       </header>
 
-      <main class="mt-6 md:flex md:justify-evenly md:flex-wrap">
-        <div class="flex flex-col gap-6 sm:w-[400px]">
-          <div v-for="image in data.i1">
-            <images :url="image.url"></images>
-          </div>
-        </div>
-        <div class="flex flex-col gap-6 sm:w-[400px]">
-          <div v-for="image in data.i2">
-            <images :url="image.url"></images>
-          </div>
+      <main class="mt-6 columns-1 sm:columns-2 md:columns-3">
+        <div v-for="image in data">
+          <images class="mb-6" :url="image.url"></images>
         </div>
       </main>
     </div>

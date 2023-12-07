@@ -32,7 +32,7 @@
 
 <!-- template -->
 <template>
-  <div class="@wrap w-fit h-fit relative">
+  <div class="@wrap w-full min-h-[10rem] rounded-xl bg-[#D8C8BB] relative">
     <figure>
       <!-- main image -->
       <img

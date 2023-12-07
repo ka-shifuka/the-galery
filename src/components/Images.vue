@@ -39,6 +39,7 @@
         class="w-full h-fit rounded-xl"
         :src="props.url"
         alt="pictures"
+        loading="lazy"
         @mouseover="slideActive = false"
       />
       <!-- end  main image -->
@@ -47,7 +48,8 @@
       <img
         class="w-full h-fit rounded-xl blur-md absolute top-4 right-0 -z-10"
         :src="props.url"
-        alt="pictures"
+        loading="lazy"
+        alt="pictures blur effect"
       />
       <!-- end background to create blur effect -->
 

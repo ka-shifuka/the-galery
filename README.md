@@ -1,7 +1,30 @@
-# Vue 3 + Vite
+## The Galery
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+is a simple galery website use vue3 and tailwindcss3
 
-## Recommended IDE Setup
+how to install
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+1. clone the repository to you local comouter
+```
+  git clone https://github.com/ka-shifuka/the-galery
+```
+
+2. install dependencies use npm
+```
+  npm install
+```
+or use yarn
+```
+  yarn install
+```
+or use pnpm (i recomended)
+```
+  pnpm install
+```
+
+3. run the project
+```
+  npm run dev
+  yarn run dev
+  pnpm run dev
+```

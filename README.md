@@ -9,16 +9,13 @@ how to install
   git clone https://github.com/ka-shifuka/the-galery
 ```
 
-2. install dependencies use npm
+2. install dependencies
 ```
+  // use npm
   npm install
-```
-or use yarn
-```
+  // use yarn
   yarn install
-```
-or use pnpm (i recomended)
-```
+  // use pnpm (i recomended)
   pnpm install
 ```
 

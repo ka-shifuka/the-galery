@@ -2,17 +2,34 @@
 <script setup>
   import Images from "./components/Images.vue";
   import data from "./assets/data.json";
+  import { ref, onMounted } from "vue";
+
+  const isload = ref(true);
+
+  onMounted(() => {
+    const counter = document.querySelector("main");
+    counter.addEventListener("load", () => {
+      console.log(isload.value, "hello world");
+      isload.value = false;
+    });
+  });
 </script>
 <!-- end script -->
 
 <!-- template -->
 <template>
-  <section class="@Container min-h-screen flex flex-col justify-between">
+  <section
+    class="@Container flex flex-col justify-between"
+    :class="isload ? 'h-screen' : 'h-fit'"
+  >
     <!-- header and main content -->
     <div class="@wrap p-6">
-      <header class="flex items-center gap-2">
+      <header class="flex items-center gap-2 select-none">
         <!-- title and icon -->
-        <img class="w-10 h-10 rounded-lg" src="/icon.jpg" />
+        <div
+          class="w-10 h-10 rounded-lg bg-cover"
+          style="background-image: url(&quot;/icon.jpg&quot;)"
+        ></div>
         <div class="@wrap flex flex-col justify-center">
           <h1 class="relative top-1.5 font-semibold text-lg">The Galery</h1>
           <p class="text-[10px]">Create By Arya Dewangga Puja | ka-shifuka</p>
@@ -20,16 +37,25 @@
         <!-- title and icon -->
       </header>
 
-      <main class="mt-6 columns-1 sm:columns-2 md:columns-3 lg:columns-4">
+      <main
+        class="mt-6 gap-10 columns-1 sm:columns-2 md:columns-3 lg:columns-4"
+      >
         <div v-for="image in data">
-          <images class="mb-6" :url="image.url"></images>
+          <images class="mb-10" :url="image"></images>
         </div>
       </main>
     </div>
     <!-- endheader and main content -->
 
     <!-- footer -->
-    <div class="@wrap">footer</div>
+    <div class="@wrap">
+      <footer class="w-full h-32 flex flex-col items-center justify-center select-none">
+        <h1 class="font-semibold text-md">----- End of Galery -----</h1>
+        <p class="text-[12px] text-zinc-700">
+          &copy;Arya Dewangga Puja | ka-shifuka
+        </p>
+      </footer>
+    </div>
     <!-- end footer -->
   </section>
 </template>

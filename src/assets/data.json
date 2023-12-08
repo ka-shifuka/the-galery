@@ -1,37 +1,22 @@
 [
-  {
-    "url": "https://ka-shifuka.github.io/cdn/img-01/images_1.jpeg",
-    "title": "Ryo Yamada",
-    "descriotion": "beautyfull anime girl"
-  },
-  {
-    "url": "https://ka-shifuka.github.io/cdn/img-01/images_2.jpeg",
-    "title": "Ryo Yamada",
-    "descriotion": "beautyfull anime girl"
-  },
-  {
-    "url": "https://ka-shifuka.github.io/cdn/img-01/images_3.jpeg",
-    "title": "Ryo Yamada",
-    "descriotion": "beautyfull anime girl"
-  },
-  {
-    "url": "https://ka-shifuka.github.io/cdn/img-01/images_4.jpeg",
-    "title": "Ryo Yamada",
-    "descriotion": "beautyfull anime girl"
-  },
-  {
-    "url": "https://ka-shifuka.github.io/cdn/img-01/images_5.jpeg",
-    "title": "Ryo Yamada",
-    "descriotion": "beautyfull anime girl"
-  },
-  {
-    "url": "https://ka-shifuka.github.io/cdn/img-01/images_6.jpeg",
-    "title": "Ryo Yamada",
-    "descriotion": "beautyfull anime girl"
-  },
-  {
-    "url": "https://ka-shifuka.github.io/cdn/img-01/images_7.jpeg",
-    "title": "Ryo Yamada",
-    "descriotion": "beautyfull anime girl"
-  }
+  "/images/images_1.jpeg",
+  "/images/images_2.jpeg",
+  "/images/images_3.jpeg",
+  "/images/images_4.jpeg",
+  "/images/images_5.jpeg",
+  "/images/images_6.jpeg",
+  "/images/images_7.jpeg",
+  "/images/images_8.jpeg",
+  "/images/images_9.jpeg",
+  "/images/images_10.jpeg",
+  "/images/images_11.jpeg",
+  "/images/images_12.jpeg",
+  "/images/images_13.jpeg",
+  "/images/images_14.jpeg",
+  "/images/images_15.jpeg",
+  "/images/images_16.jpeg",
+  "/images/images_17.jpeg",
+  "/images/images_18.jpeg",
+  "/images/images_19.jpeg",
+  "/images/images_20.jpeg"
 ]

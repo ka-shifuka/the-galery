@@ -2,17 +2,6 @@
 <script setup>
   import Images from "./components/Images.vue";
   import data from "./assets/data.json";
-  import { ref, onMounted } from "vue";
-
-  const isload = ref(true);
-
-  onMounted(() => {
-    const counter = document.querySelector("main");
-    counter.addEventListener("load", () => {
-      console.log(isload.value, "hello world");
-      isload.value = false;
-    });
-  });
 </script>
 <!-- end script -->
 
@@ -40,16 +29,16 @@
       <main
         class="mt-6 gap-10 columns-1 sm:columns-2 md:columns-3 lg:columns-4"
       >
-        <div v-for="image in data">
-          <images class="mb-10" :url="image"></images>
-        </div>
+        <images v-for="image in data" class="mb-10" :url="image"></images>
       </main>
     </div>
     <!-- endheader and main content -->
 
     <!-- footer -->
     <div class="@wrap">
-      <footer class="w-full h-32 flex flex-col items-center justify-center select-none">
+      <footer
+        class="w-full h-32 flex flex-col items-center justify-center select-none"
+      >
         <h1 class="font-semibold text-md">----- End of Galery -----</h1>
         <p class="text-[12px] text-zinc-700">
           &copy;Arya Dewangga Puja | ka-shifuka

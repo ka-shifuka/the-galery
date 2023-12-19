@@ -1,23 +1,11 @@
 <!-- script -->
 <script setup>
-  import { ref, onMounted } from "vue";
-
-  const slideActive = ref(false); // slide is to show figcaption
   /*
    * Define properties in this component
    * url : url of images
    */
   const props = defineProps({
     url: String
-  });
-
-  /*
-   * if is scroll slideActive become false
-   */
-  onMounted(() => {
-    window.addEventListener("scroll", function () {
-      slideActive.value = false;
-    });
   });
 </script>
 <!-- end script -->
@@ -40,7 +28,7 @@
         <!-- download link -->
         <a
           download
-          class="absolute bottom-1.5 right-1.5 p-2 text-[8px] text-zinc-100 rounded-md backdrop-blur-3xl cursor-pointer"
+          class="absolute bottom-1.5 right-1.5 p-2 text-xs text-zinc-100 rounded-md backdrop-blur cursor-pointer"
           :href="props.url"
         >
           <i class="bi bi-arrow-down"></i> Download
@@ -51,7 +39,7 @@
 
       <!-- background to create blur effect -->
       <img
-        class="w-full h-fit rounded-xl blur-md absolute top-4 right-0 -z-10 brightness-75 transition-all duration-[400ms] group-hover:scale-95"
+        class="w-full h-fit rounded-xl blur-md absolute top-4 right-0 -z-10 brightness-75 transition-all duration-[400ms] group-hover:scale-95 group-hover:-translate-y-2"
         :src="props.url"
         loading="lazy"
         alt="pictures blur effect"
